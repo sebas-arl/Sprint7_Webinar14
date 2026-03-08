@@ -18,6 +18,7 @@ chart = st.line_chart([0.5])
 
 def toss_coin(n):  # Función que emula el lanzamiento de una moneda
     trial_outcomes = scipy.stats.bernoulli.rvs(p=0.5, size=n)
+
     mean = None
     outcome_no = 0
     outcome_1_count = 0
@@ -41,7 +42,7 @@ if start_button:
     st.session_state['experiment_no'] += 1
     mean = toss_coin(number_of_trials)
     st.session_state['df_experiment_results'] = pd.concat([
-        st.session_state['df_experiment_results']
+        st.session_state['df_experiment_results'],
         pd.DataFrame(data=[[st.session_state['experiment_no'],
                             number_of_trials,
                             mean]],
