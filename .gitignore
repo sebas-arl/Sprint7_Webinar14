@@ -9,6 +9,7 @@ __pycache__/
 .venv/
 venv/
 env/
+Proyecto_Sprint7/
 
 # Jupyter Notebooks
 .ipynb_checkpoints
